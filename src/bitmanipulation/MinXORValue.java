@@ -8,15 +8,15 @@ import java.util.Collections;
  * value. Report the minimum XOR value.
  */
 public class MinXORValue {
-  public int findMinXor(ArrayList<Integer> A) {
-    Collections.sort(A);
-    int min = Integer.MAX_VALUE;
-    for (int i = 0; i < A.size() - 1; i++) {
-      int xor = A.get(i) ^ A.get(i + 1);
-      if (xor < min) {
-        min = xor;
-      }
-    }
-    return min;
-  }
+	public int findMinXor(ArrayList<Integer> A) {
+		Collections.sort(A);
+		int min = Integer.MAX_VALUE;
+		for (int i = 0; i < A.size() - 1; i++) {
+			int xor = A.get(i) ^ A.get(i + 1);
+			if (xor < min) {
+				min = xor;
+			}
+		}
+		return min;
+	}
 }

@@ -1,4 +1,5 @@
 package arrays;
+
 import java.util.List;
 
 /*
@@ -6,16 +7,16 @@ import java.util.List;
  * largest sum.
  */
 public class MaxSumContiguousSubarray {
-  public int maxSubArray(final List<Integer> A) {
-    int maxSoFar = Integer.MIN_VALUE;
-    int max = 0;
-    for (int i = 0; i < A.size(); i++) {
-      max = max + A.get(i);
-      if (maxSoFar < max)
-        maxSoFar = max;
-      if (max < 0)
-        max = 0;
-    }
-    return maxSoFar;
-  }
+	public int maxSubArray(final List<Integer> A) {
+		int maxSoFar = Integer.MIN_VALUE;
+		int max = 0;
+		for (int i = 0; i < A.size(); i++) {
+			max = max + A.get(i);
+			if (maxSoFar < max)
+				maxSoFar = max;
+			if (max < 0)
+				max = 0;
+		}
+		return maxSoFar;
+	}
 }

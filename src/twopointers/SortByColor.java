@@ -12,25 +12,25 @@ import java.util.ArrayList;
  * 
  */
 public class SortByColor {
-  public void sortColors(ArrayList<Integer> a) {
-    int n = a.size();
-    int temp = 0, low = 0, mid = 0, high = n - 1;
-    while (mid <= high) {
-      if (a.get(mid) == 0) {
-        temp = a.get(low);
-        a.set(low, a.get(mid));
-        a.set(mid, temp);
-        mid++;
-        low++;
-      } else if (a.get(mid) == 1) {
-        mid++;
-      } else {
-        temp = a.get(mid);
-        a.set(mid, a.get(high));
-        a.set(high, temp);
-        high--;
-      }
+	public void sortColors(ArrayList<Integer> a) {
+		int n = a.size();
+		int temp = 0, low = 0, mid = 0, high = n - 1;
+		while (mid <= high) {
+			if (a.get(mid) == 0) {
+				temp = a.get(low);
+				a.set(low, a.get(mid));
+				a.set(mid, temp);
+				mid++;
+				low++;
+			} else if (a.get(mid) == 1) {
+				mid++;
+			} else {
+				temp = a.get(mid);
+				a.set(mid, a.get(high));
+				a.set(high, temp);
+				high--;
+			}
 
-    }
-  }
+		}
+	}
 }

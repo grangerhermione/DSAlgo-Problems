@@ -14,29 +14,29 @@ import java.util.ArrayList;
  * in the array.
  */
 public class LongestCommonPrefix {
-  public String longestCommonPrefix(ArrayList<String> A) {
-    boolean flag = true;
-    int index = 0;
-    StringBuilder str = new StringBuilder();
-    while (flag) {
-      char first = A.get(0).charAt(index);
-      int count = 1;
-      for (int i = 1; i < A.size(); i++) {
-        if (A.get(i).length() > index && A.get(i).charAt(index) == first) {
-          count++;
-        } else {
-          flag = false;
-          break;
-        }
-      }
-      if (count == A.size()) {
-        str.append(String.valueOf(first));
-      }
-      index++;
-      if (index == A.get(0).length()) {
-        break;
-      }
-    }
-    return str.toString();
-  }
+	public String longestCommonPrefix(ArrayList<String> A) {
+		boolean flag = true;
+		int index = 0;
+		StringBuilder str = new StringBuilder();
+		while (flag) {
+			char first = A.get(0).charAt(index);
+			int count = 1;
+			for (int i = 1; i < A.size(); i++) {
+				if (A.get(i).length() > index && A.get(i).charAt(index) == first) {
+					count++;
+				} else {
+					flag = false;
+					break;
+				}
+			}
+			if (count == A.size()) {
+				str.append(String.valueOf(first));
+			}
+			index++;
+			if (index == A.get(0).length()) {
+				break;
+			}
+		}
+		return str.toString();
+	}
 }

@@ -8,14 +8,14 @@ import java.util.ArrayList;
  * the expected length.
  */
 public class RemoveElementFromArray {
-  public int removeElement(ArrayList<Integer> a, int b) {
-    int n = a.size();
-    int j = 0;
-    for (int i = 0; i < n; i++) {
-      if (a.get(i) != b) {
-        a.set(j++, a.get(i));
-      }
-    }
-    return j;
-  }
+	public int removeElement(ArrayList<Integer> a, int b) {
+		int n = a.size();
+		int j = 0;
+		for (int i = 0; i < n; i++) {
+			if (a.get(i) != b) {
+				a.set(j++, a.get(i));
+			}
+		}
+		return j;
+	}
 }

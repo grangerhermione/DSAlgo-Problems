@@ -14,18 +14,18 @@ import java.util.ArrayList;
  * plane we are working with for simplicity ).
  */
 public class ContainerWithMostWater {
-  public int maxArea(ArrayList<Integer> A) {
-    int l = 0;
-    int r = A.size() - 1;
-    int area = 0;
-    while (l < r) {
-      area = Math.max(area, (r - l) * (Math.min(A.get(l), A.get(r))));
-      if (A.get(l) < A.get(r))
-        l++;
-      else
-        r--;
-    }
-    return area;
-  }
+	public int maxArea(ArrayList<Integer> A) {
+		int l = 0;
+		int r = A.size() - 1;
+		int area = 0;
+		while (l < r) {
+			area = Math.max(area, (r - l) * (Math.min(A.get(l), A.get(r))));
+			if (A.get(l) < A.get(r))
+				l++;
+			else
+				r--;
+		}
+		return area;
+	}
 
 }
